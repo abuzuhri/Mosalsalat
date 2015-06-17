@@ -11,6 +11,7 @@
         android:layout_above="@+id/imgseparator"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="50dp"
         android:layout_gravity="center"
         android:layout_marginBottom="7dp"/>
 

@@ -41,8 +41,15 @@ public class FragmentLoginPager extends Fragment {
         View v = inflater.inflate(R.layout.fragment_login_pager, container, false);
 
         ImageView img=(ImageView) v.findViewById(R.id.imageView);
-        img.setImageResource(R.drawable.fab_bg_normal);
 
+        if(message.equals("1"))
+            img.setImageResource(R.drawable.loginpager1);
+        else if(message.equals("2"))
+            img.setImageResource(R.drawable.loginpager2);
+        else if(message.equals("3"))
+            img.setImageResource(R.drawable.loginpager3);
+        else if(message.equals("4"))
+            img.setImageResource(R.drawable.loginpager4);
 
         return v;
 

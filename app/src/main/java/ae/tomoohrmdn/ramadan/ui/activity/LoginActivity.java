@@ -130,10 +130,10 @@ public class LoginActivity extends BaseActivity {
 
 
 
-        fList.add(FragmentLoginPager.newInstance("Fragment 1"));
-        fList.add(FragmentLoginPager.newInstance("Fragment 2"));
-        fList.add(FragmentLoginPager.newInstance("Fragment 3"));
-        fList.add(FragmentLoginPager.newInstance("Fragment 4"));
+        fList.add(FragmentLoginPager.newInstance("1"));
+        fList.add(FragmentLoginPager.newInstance("2"));
+        fList.add(FragmentLoginPager.newInstance("3"));
+        fList.add(FragmentLoginPager.newInstance("4"));
 
 
         return fList;
