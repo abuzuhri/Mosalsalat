@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <PreferenceCategory android:title="@string/basic_setting_category">
+
+    <Preference
+        android:key="logout"
+        android:title="@string/user_logout_preference"
+        android:summary="@string/user_logout_preference_summary"
+        android:enabled="true"
+        />
+
+
+  </PreferenceCategory>
+
+
+
+    <PreferenceCategory android:title="@string/notification_category">
+
+        <SwitchPreference
+            android:key="notification"
+            android:title="@string/notification_offer"
+            android:summaryOn="@string/notification_offer_summary"
+            android:summaryOff="@string/notification_offer_summary"
+            />
+
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/app_details_category">
+
+        <Preference
+            android:key="rateapp"
+            android:title="@string/app_details_rate_app"
+            android:summary="@string/app_details_rate_app_summary"
+            />
+
+        <Preference
+
+            android:title="@string/app_details_version_name"
+            android:summary="@string/app_details_version_number"
+            />
+
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

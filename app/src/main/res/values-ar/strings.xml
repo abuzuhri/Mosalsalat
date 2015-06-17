@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">مسلسلات رمضان 2015</string>
+
+    <!-- Splash -->
+    <string name="item_details_episode_num"> حلقة رقم </string>
+
+
+    <!-- Splash -->
+    <string name="fb_btn_login">تسجيل الدخول مع الفيسبوك</string>
+    <string name="gp_btn_login">تسجيل الدخول مع جوجل</string>
+    <string name="login_activity_info_text"> نحن لا ننشر أي شيء إلى الفيسبوك أو جوجل بلس </string>
+
+    <!-- Dialog  -->
+    <string name="dialog_ok">حسنا</string>
+    <string name="dialog_yes">نعم</string>
+    <string name="dialog_no">لا</string>
+
+    <!--ic_drawer-->
+    <string name="ic_drawer_home">البداية</string>
+    <string name="ic_drawer_series">مسلسلات</string>
+    <string name="ic_drawer_program">برامج</string>
+    <string name="ic_drawer_topshows">إختيارنا</string>
+    <string name="ic_drawer_favorites">المفضلة</string>
+    <string name="ic_drawer_episode">الحلقات الجديدة</string>
+    <string name="ic_drawer_settings">الإعدادات</string>
+
+    <!-- Menu -->
+    <string name="action_settings">الإعدادات</string>
+    <string name="action_refresh">تحديث</string>
+    <string name="action_search">بحث</string>
+
+    <!-- Settings -->
+    <string name="basic_setting_category">الإعدادات الأساسية</string>
+
+    <string name="user_logout_preference">تسجيل الخروج</string>
+    <string name="user_logout_preference_summary">تسجيل الخروج المستخدم الحالي</string>
+    <string name="user_logout_clear_data">حذف بيانات المستخدم ؟</string>
+    <string name="user_logout_clear_data_summary">سوف يتوجب عليك إعادة تسجيل الدخول</string>
+
+
+    <string name="notification_category">التنبيهات</string>
+
+    <string name="notification_offer"> رسائل الحلقات </string>
+    <string name="notification_offer_summary">اخطرني عند إضافة حلقة جديدة</string>
+
+    
+    <string name="app_details_category">تفاصيل التطبيق</string>
+    <string name="app_details_rate_app">قيم هذا التطبيق</string>
+    <string name="app_details_rate_app_summary">سيكون أمرا رائعا لو قمت بتقيمنا </string>
+    <string name="app_details_version_name">الإصدار</string>
+
+
+    <!-- End Settings -->
+
+</resources>

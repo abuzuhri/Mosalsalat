@@ -1,0 +1,26 @@
+<resources>
+    <string name="facebook_app_id" translatable="false">374742712731223</string>
+    <string name="fabric_app_id" translatable="false">717f8f19e9dad7cc70487fd5c8bd15f540728cd3</string>
+    <string name="app_details_version_number" translatable="false">1</string>
+    <string-array name="colors" translatable="false">
+        <item>#EF5350</item>
+        <item>#EC407A</item>
+        <item>#AB47BC</item>
+        <item>#7E57C2</item>
+        <item>#5C6BC0</item>
+        <item>#42A5F5</item>
+        <item>#29B6F6</item>
+        <item>#26C6DA</item>
+        <item>#26A69A</item>
+        <item>#66BB6A</item>
+        <item>#9CCC65</item>
+        <item>#D4E157</item>
+        <item>#FFEE58</item>
+        <item>#FFCA28</item>
+        <item>#FFA726</item>
+        <item>#FF7043</item>
+        <item>#8D6E63</item>
+        <item>#78909C</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,98 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v4.view.ViewPager
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/view_pager"
+        android:layout_above="@+id/imgseparator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginBottom="7dp"/>
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgseparator"
+        android:scaleType="fitXY"
+        android:layout_above="@+id/indicator"
+        android:src="@drawable/elipseshadow_img"/>
+
+    <ae.tomoohrmdn.ramadan.view.Pager.CirclePageIndicator
+        android:id="@+id/indicator"
+        android:layout_above="@+id/facebook_button"
+        android:padding="10dip"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        app:radius="7dp"
+        app:fillColor="#FF888888"
+        app:pageColor="#88FFFFFF"
+        app:strokeColor="#FF888888"
+        app:strokeWidth="1dp"
+        />
+
+    <Button
+        android:id="@+id/facebook_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_fb_loggin"
+        android:layout_marginRight="@dimen/btn_small_margin_corner"
+        android:layout_marginLeft="@dimen/btn_small_margin_corner"
+        android:padding="@dimen/small_padding"
+        android:text="@string/fb_btn_login"
+        android:textColor="@android:color/white"
+        android:layout_above="@+id/google_plus_button"
+        android:layout_alignParentLeft="true"
+        android:shadowRadius="5"
+        android:layout_marginBottom="5dp"
+        android:textAllCaps="false"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/google_plus_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/info"
+        android:background="@drawable/btn_gp_loggin"
+        android:layout_marginRight="@dimen/btn_small_margin_corner"
+        android:layout_marginLeft="@dimen/btn_small_margin_corner"
+        android:padding="@dimen/small_padding"
+        android:text="@string/gp_btn_login"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="5dp"
+        android:textAllCaps="false"
+        android:shadowRadius="5" />
+
+    <LinearLayout
+        android:id="@+id/info"
+        android:padding="@dimen/small_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="5dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/info_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_activity_info_text"
+            android:textSize="12sp"
+            android:textColor="#FF888888"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

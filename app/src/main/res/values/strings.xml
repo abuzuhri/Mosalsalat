@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Ramadan Tv Series 2015</string>
+
+    <!-- Splash -->
+    <string name="item_details_episode_num">Episode No. </string>
+
+
+    <!-- Splash -->
+    <string name="fb_btn_login">Sign in with Facebook</string>
+    <string name="gp_btn_login">Sign in with Google</string>
+    <string name="login_activity_info_text">We do not post anything to Facebook or google plus</string>
+
+    <!-- Dialog  -->
+    <string name="dialog_ok">Ok</string>
+    <string name="dialog_yes">Yes</string>
+    <string name="dialog_no">No</string>
+
+    <!--ic_drawer-->
+    <string name="ic_drawer_home">Home</string>
+    <string name="ic_drawer_series">Series</string>
+    <string name="ic_drawer_program">Program</string>
+    <string name="ic_drawer_topshows">Top Shows</string>
+    <string name="ic_drawer_favorites">Favorites</string>
+    <string name="ic_drawer_episode">New Episode</string>
+    <string name="ic_drawer_settings">Settings</string>
+
+    <!-- Menu -->
+    <string name="action_settings">Settings</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_search">Search</string>
+
+    <!-- Settings -->
+    <string name="basic_setting_category">Basic settings</string>
+
+    <string name="user_logout_preference">Log Out</string>
+    <string name="user_logout_preference_summary">Log out current user</string>
+    <string name="user_logout_clear_data">Clear user data?</string>
+    <string name="user_logout_clear_data_summary">You will have to re-connect your account.</string>
+
+
+    <string name="notification_category">Notifications</string>
+
+    <string name="notification_offer">Episode Message</string>
+    <string name="notification_offer_summary">Notify when new Offer message received.</string>
+
+
+    <string name="app_details_category">App Details</string>
+    <string name="app_details_rate_app">Rate this app</string>
+    <string name="app_details_rate_app_summary">It would be great if you took a moment to rate it.</string>
+    <string name="app_details_version_name">Version</string>
+
+    <!-- End Settings -->
+
+</resources>

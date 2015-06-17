@@ -1,0 +1,21 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!-- ...and here we setting appcompat’s color theme attrs -->
+        <item name="colorPrimary">@color/colorPrimary</item><!--#F1433C-->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item><!--#D03033-->
+        <item name="colorAccent">@color/colorAccent</item><!--#02A8F3-->
+
+    </style>
+
+    <style name="CustomCirclePageIndicator">
+        <item name="fillColor">#FF888888</item>
+        <item name="strokeColor">#FF000000</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="radius">10dp</item>
+        <item name="centered">true</item>
+    </style>
+
+</resources>
