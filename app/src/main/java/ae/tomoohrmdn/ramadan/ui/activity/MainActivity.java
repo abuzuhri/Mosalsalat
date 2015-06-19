@@ -1,6 +1,12 @@
 package ae.tomoohrmdn.ramadan.ui.activity;
 
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.TaskStackBuilder;
+import android.support.v7.app.NotificationCompat;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -33,7 +39,7 @@ public class MainActivity extends BaseActivity
         CreateDrawer(toolbar);
         SetupToolbarShadow();
 
-        selectItem(AppConstant.AppDrawer.Home.id);
+        selectItem(AppConstant.AppDrawer.NewEpisode.id);
 
 
         AppAction.getNewoffer(this);

@@ -185,15 +185,15 @@ public class BaseActivity  extends AppCompatActivity {
                 .withAccountHeader(headerResult)
                 .addDrawerItems(
                         new PrimaryDrawerItem().withName(R.string.ic_drawer_home).withIdentifier(AppConstant.AppDrawer.Home.id).withIcon(FontAwesome.Icon.faw_dashboard),
+                        new PrimaryDrawerItem().withName(R.string.ic_drawer_episode).withIdentifier(AppConstant.AppDrawer.NewEpisode.id).withIcon(GoogleMaterial.Icon.gmd_new_releases),
                         new PrimaryDrawerItem().withName(R.string.ic_drawer_series).withIdentifier(AppConstant.AppDrawer.Series.id).withIcon(FontAwesome.Icon.faw_file_movie_o),
                         new PrimaryDrawerItem().withName(R.string.ic_drawer_program).withIdentifier(AppConstant.AppDrawer.Program.id).withIcon(GoogleMaterial.Icon.gmd_video_library),
                         new PrimaryDrawerItem().withName(R.string.ic_drawer_topshows).withIdentifier(AppConstant.AppDrawer.TopShows.id).withIcon(FontAwesome.Icon.faw_star),
-                        new PrimaryDrawerItem().withName(R.string.ic_drawer_favorites).withIdentifier(AppConstant.AppDrawer.Favorites.id).withIcon(GoogleMaterial.Icon.gmd_favorite),
-                        new PrimaryDrawerItem().withName(R.string.ic_drawer_episode).withIdentifier(AppConstant.AppDrawer.NewEpisode.id).withIcon(GoogleMaterial.Icon.gmd_new_releases)
+                        new PrimaryDrawerItem().withName(R.string.ic_drawer_favorites).withIdentifier(AppConstant.AppDrawer.Favorites.id).withIcon(GoogleMaterial.Icon.gmd_favorite)
 
                 )
                 .addStickyDrawerItems(new PrimaryDrawerItem().withName(R.string.ic_drawer_settings).withIdentifier(AppConstant.AppDrawer.Settings.id).withIcon(GoogleMaterial.Icon.gmd_settings))
-                .withSelectedItem(0)
+                .withSelectedItem(1)
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(AdapterView<?> parent, View view, int position, long id, IDrawerItem drawerItem) {

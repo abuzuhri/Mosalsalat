@@ -11,6 +11,25 @@ import ae.tomoohrmdn.ramadan.R;
  */
 public class DialogUtils {
 
+    public  static void   OkDialog(Activity activity,String title,String message)
+    {
+        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+        if(!title.isEmpty())
+            builder.setTitle(title);
+        builder.setMessage(message);
+
+        builder.setPositiveButton(R.string.dialog_ok, new DialogInterface.OnClickListener() {
+
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+
+        });
+
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
+
     public  static void   OkDialog(Activity activity,String title,String message,final DialogInterface.OnClickListener listener )
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);

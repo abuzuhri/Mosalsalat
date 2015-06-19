@@ -18,6 +18,7 @@ import ae.tomoohrmdn.ramadan.R;
 import ae.tomoohrmdn.ramadan.ui.fragment.FragmentLoginPager;
 import ae.tomoohrmdn.ramadan.utils.AppAction;
 import ae.tomoohrmdn.ramadan.utils.AppLog;
+import ae.tomoohrmdn.ramadan.utils.GCM;
 import ae.tomoohrmdn.ramadan.utils.Login.FacebookLogin;
 import ae.tomoohrmdn.ramadan.utils.Login.GooglPlusLogin;
 import ae.tomoohrmdn.ramadan.utils.Login.OnLoginListener;
@@ -103,8 +104,11 @@ public class LoginActivity extends BaseActivity {
             @Override
             public void onSuccess(SocialUser user) {
                 String msg="Hi, " + user.name + "  " + user.email +" "+user.avatarURL;
-                Toast.makeText(LoginActivity.this,msg , Toast.LENGTH_LONG).show();
+                //Toast.makeText(LoginActivity.this,msg , Toast.LENGTH_LONG).show();
                 AppLog.i(msg);
+
+                GCM gcm=new GCM(LoginActivity.this,user.name);
+                gcm.connect();
 
                 AppAction.OpenActivity(LoginActivity.this, MainActivity.class);
                 LoginActivity.this.finish();
@@ -112,7 +116,7 @@ public class LoginActivity extends BaseActivity {
 
             @Override
             public void onFail() {
-                Toast.makeText(LoginActivity.this, "onFail", Toast.LENGTH_LONG).show();
+                Toast.makeText(LoginActivity.this, "Error Login", Toast.LENGTH_LONG).show();
             }
         });
     }

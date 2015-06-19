@@ -1,6 +1,7 @@
 package ae.tomoohrmdn.ramadan.ui.fragment;
 
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -18,6 +19,7 @@ import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.getbase.floatingactionbutton.FloatingActionButton;
 import com.squareup.picasso.Picasso;
@@ -30,6 +32,7 @@ import ae.tomoohrmdn.ramadan.db.Entity.Show;
 import ae.tomoohrmdn.ramadan.ui.activity.OneFragmentActivity;
 import ae.tomoohrmdn.ramadan.utils.AppAction;
 import ae.tomoohrmdn.ramadan.utils.AppLog;
+import ae.tomoohrmdn.ramadan.utils.DialogUtils;
 import ae.tomoohrmdn.ramadan.utils.IntentUtils;
 import ae.tomoohrmdn.ramadan.view.Adapter.ItemAdapter;
 import ae.tomoohrmdn.ramadan.view.Adapter.ItemDetailsAdapter;
@@ -90,20 +93,13 @@ public class ItemDetailsFragment extends BaseFragment {
 
         AppLog.i("showObj.Episodes() + > " + showObj.Episodes().size());
 
-        /*
+
         if (showObj.Episodes() != null && showObj.Episodes().size()>0) {
             fb.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    String youtubelink = "https://www.youtube.com/watch?v=" + "";
-                    //AppLog.i("showObj.YouTubeVideo.length() ==> " + showObj.YouTubeVideo.length());
-                    //AppLog.i("showObj.YouTubeVideo ==> " + showObj.YouTubeVideo);
-                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(youtubelink));
-                    getActivity().startActivity(intent);
-                    PackageManager pm = getActivity().getPackageManager();
-                    //Intent intent = IntentUtils.newYouTubeIntent(pm, showObj.YouTubeVideo);
 
-                    AppAction.OpenActivityIntent(getActivity(), intent);
+                    AppAction.OpenVedio(showObj.Episodes().get(0).getId(),getActivity());
                 }
             });
 
@@ -126,8 +122,10 @@ public class ItemDetailsFragment extends BaseFragment {
             });
         } else {
             fb.setVisibility(View.GONE);
+            DialogUtils.OkDialog(getActivity(), "", getString(R.string.no_Episodes_found));
+
         }
-*/fb.setVisibility(View.GONE);
+
 
 
         Picasso.with(getActivity()).load(showObj.Channel.LogoUrl).into(photo);
@@ -136,7 +134,7 @@ public class ItemDetailsFragment extends BaseFragment {
 
         AppLog.i("call ItemDetailsAdapter");
 
-        mAdapter = new ItemDetailsAdapter(showObj.Episodes(),getActivity(),new IClickCardView() {
+        mAdapter = new ItemDetailsAdapter(showObj.Episodes(),getActivity(),false,new IClickCardView() {
             @Override
             public void onClick(View v, long ID) {
                 AppAction.OpenVedio(ID,getActivity());

@@ -87,7 +87,7 @@ public class ItemListEpisodeFragment extends BaseFragment
 
         AppLog.i("episodeDao.getAll() >> "+episodeDao.getAll().size());
 
-        mAdapter = new ItemDetailsAdapter(episodeDao.getAll(),getActivity(),new IClickCardView() {
+        mAdapter = new ItemDetailsAdapter(episodeDao.getAll(),getActivity(),true,new IClickCardView() {
             @Override
             public void onClick(View v, long ID) {
                 AppAction.OpenVedio(ID,getActivity());

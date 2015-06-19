@@ -35,13 +35,15 @@ public class ItemDetailsAdapter extends RecyclerView.Adapter<ItemViewHolder>
     private Context context;
     private IClickCardView mListener;
     private static  int targetWidth=0;
+    private boolean isMenu;
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public ItemDetailsAdapter(List<Episode> myDataset, Context context, IClickCardView mListener) {
+    public ItemDetailsAdapter(List<Episode> myDataset, Context context,boolean isMenu, IClickCardView mListener) {
         AppLog.i("myDataset = "+myDataset.size());
         mDataset = myDataset;
         this.context=context;
         this.mListener=mListener;
+        this.isMenu=isMenu;
     }
 
 
@@ -66,12 +68,14 @@ public class ItemDetailsAdapter extends RecyclerView.Adapter<ItemViewHolder>
 
         // - get data from your itemsData at this position
         // - replace the contents of the view with that itemsData
-        Episode obj= mDataset.get(position);
+        Episode obj = mDataset.get(position);
 
         viewHolder.setID(obj.getId());
+        String plusName = "";
+        if (isMenu)
+            plusName = obj.Show.Name + " > ";
 
-
-        viewHolder.ChannelName.setText(context.getString(R.string.item_details_episode_num) + " " + obj.SeqNum);
+        viewHolder.ChannelName.setText(plusName + context.getString(R.string.item_details_episode_num) + " " + obj.SeqNum);
         viewHolder.ShowName.setVisibility(View.GONE);
         viewHolder.ShowDescription.setVisibility(View.GONE);
 
@@ -86,7 +90,42 @@ public class ItemDetailsAdapter extends RecyclerView.Adapter<ItemViewHolder>
         CharSequence timeAgo = DateUtils.getRelativeTimeSpanString(calendar.getTimeInMillis(), System.currentTimeMillis(), DateUtils.SECOND_IN_MILLIS);
         viewHolder.timestamp.setText(timeAgo);
 
-        viewHolder.ShowLogoUrl.setVisibility(View.GONE);
+        if (isMenu) {
+            Target target = new Target() {
+                @Override
+                public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
+
+                    //whatever algorithm here to compute size
+                    if (targetWidth == 0)
+                        targetWidth = viewHolder.ShowLogoUrl.getWidth();
+                    AppLog.i("viewHolder.ShowLogoUrl.getWidth()" + targetWidth + " >>" + viewHolder.ShowLogoUrl.getWidth());
+
+                    float ratio = (float) bitmap.getHeight() / (float) bitmap.getWidth();
+                    float heightFloat = ((float) targetWidth) * ratio;
+
+                    final android.view.ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) viewHolder.ShowLogoUrl.getLayoutParams();
+
+                    layoutParams.height = (int) heightFloat;
+                    layoutParams.width = (int) targetWidth;
+                    viewHolder.ShowLogoUrl.setLayoutParams(layoutParams);
+                    viewHolder.ShowLogoUrl.setImageBitmap(bitmap);
+
+                }
+
+                @Override
+                public void onBitmapFailed(Drawable errorDrawable) {
+
+                }
+
+                @Override
+                public void onPrepareLoad(Drawable placeHolderDrawable) {
+
+                }
+            };
+            Picasso.with(context).load(obj.Show.ImgUrl).into(target);
+        }else{
+            viewHolder.ShowLogoUrl.setVisibility(View.GONE);
+        }
     }
 
     private int randomColor() {

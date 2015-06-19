@@ -11,9 +11,9 @@ import java.util.TimeZone;
 public class AppConstant {
 
 
-    private static String ServerUrl="http://pass2you.com/";
-    public static String ServerUrlNewFeed=ServerUrl+"OtherApi/RamadanApps/Index";//"test/shopoffer/file.aspx";
-
+    private static final String ServerUrl="http://pass2you.com/";
+    public static final String ServerUrlNewFeed=ServerUrl+"OtherApi/RamadanApps/Index";//"test/shopoffer/file.aspx";
+    public static final String SERVER_URL_REGISTER_GCM_USER = ServerUrl+"OtherApi/RamadanApps/RegisterGoogleCloudeUser";
     public enum AppDrawer {
         Home(10),
         Series(20),

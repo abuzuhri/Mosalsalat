@@ -25,14 +25,20 @@ import io.fabric.sdk.android.Fabric;
  */
 public class myApplication extends Application {
 
+    private static Context mContext;
+
     @Override
     public void onCreate() {
         super.onCreate();
+        mContext = this;
         Fabric.with(this, new Crashlytics());
         initializeDB();
         InitImageLoader();
     }
 
+    public static Context getContext(){
+        return mContext;
+    }
 
     protected void initializeDB() {
         Configuration.Builder configurationBuilder = new Configuration.Builder(this);

@@ -31,7 +31,13 @@ public class EpisodeDao extends BaseDao
     }
 
     public List<Episode> getAll(){
-        return getAll(Episode.class);
+        List<Episode> list= new Select()
+                .from(Episode.class)
+                .orderBy("is_seen,PostDate desc")
+                .execute();
+        if(list==null || list.size()==0)
+            return null;
+        else return list;
     }
 
     public void Save(Episode episode) {

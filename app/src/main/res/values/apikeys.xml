@@ -2,6 +2,7 @@
     <string name="facebook_app_id" translatable="false">374742712731223</string>
     <string name="fabric_app_id" translatable="false">717f8f19e9dad7cc70487fd5c8bd15f540728cd3</string>
     <string name="app_details_version_number" translatable="false">1</string>
+    <string name="gcm_project_number"  translatable="false">506064627869</string>
     <string-array name="colors" translatable="false">
         <item>#EF5350</item>
         <item>#EC407A</item>

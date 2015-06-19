@@ -9,11 +9,16 @@
     <string name="fb_btn_login">تسجيل الدخول مع الفيسبوك</string>
     <string name="gp_btn_login">تسجيل الدخول مع جوجل</string>
     <string name="login_activity_info_text"> نحن لا ننشر أي شيء إلى الفيسبوك أو جوجل بلس </string>
+    <!-- Mssage -->
+
+
 
     <!-- Dialog  -->
     <string name="dialog_ok">حسنا</string>
     <string name="dialog_yes">نعم</string>
     <string name="dialog_no">لا</string>
+    <string name="no_Episodes_found">لم يتم تحمل اي حلقة حتي الأن , سوف نقوم بتنبيهك عندما نقوم بتحمل اي حلقة جديد </string>
+
 
     <!--ic_drawer-->
     <string name="ic_drawer_home">البداية</string>

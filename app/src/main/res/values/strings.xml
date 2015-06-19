@@ -15,6 +15,10 @@
     <string name="dialog_yes">Yes</string>
     <string name="dialog_no">No</string>
 
+    <!-- Mssage -->
+
+    <string name="no_Episodes_found">No Episode Uploaded Until Now , we will send you notification once we upload new Episode </string>
+
     <!--ic_drawer-->
     <string name="ic_drawer_home">Home</string>
     <string name="ic_drawer_series">Series</string>
