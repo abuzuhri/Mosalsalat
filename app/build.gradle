@@ -28,8 +28,8 @@ android {
         applicationId "ae.tomoohrmdn.ramadan"
         minSdkVersion 14
         targetSdkVersion 22
-        versionCode 3
-        versionName "3"
+        versionCode 4
+        versionName "4"
     }
     buildTypes {
         release {
