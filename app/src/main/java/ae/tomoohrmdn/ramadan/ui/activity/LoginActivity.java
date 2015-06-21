@@ -15,6 +15,7 @@ import com.facebook.AccessToken;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
 import ae.tomoohrmdn.ramadan.R;
+import ae.tomoohrmdn.ramadan.libary.AppRemoteContoller;
 import ae.tomoohrmdn.ramadan.ui.fragment.FragmentLoginPager;
 import ae.tomoohrmdn.ramadan.utils.AppAction;
 import ae.tomoohrmdn.ramadan.utils.AppLog;
@@ -112,6 +113,8 @@ public class LoginActivity extends BaseActivity {
 
                 AppAction.OpenActivity(LoginActivity.this, MainActivity.class);
                 LoginActivity.this.finish();
+
+
             }
 
             @Override

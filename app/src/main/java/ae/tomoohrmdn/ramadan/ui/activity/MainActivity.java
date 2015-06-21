@@ -43,9 +43,17 @@ public class MainActivity extends BaseActivity
 
 
         AppAction.getNewoffer(this);
+
+
+        CancelNotification(this,1);
     }
 
-
+    public void CancelNotification(Context ctx, int notifyId) {
+        String ns = Context.NOTIFICATION_SERVICE;
+        NotificationManager nMgr = (NotificationManager) ctx
+                .getSystemService(ns);
+        nMgr.cancel(notifyId);
+    }
 
     @Override
     protected void onResume() {

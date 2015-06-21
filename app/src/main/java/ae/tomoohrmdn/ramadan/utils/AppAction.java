@@ -1,6 +1,7 @@
 package ae.tomoohrmdn.ramadan.utils;
 
 import android.app.Activity;
+import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -137,16 +138,17 @@ public class AppAction {
             stackBuilder.addParentStack(MainActivity.class);
             // Adds the Intent that starts the Activity to the top of the stack
             stackBuilder.addNextIntent(resultIntent);
-            PendingIntent resultPendingIntent =
-                    stackBuilder.getPendingIntent(
-                            0,
-                            PendingIntent.FLAG_UPDATE_CURRENT
-                    );
+            PendingIntent resultPendingIntent = stackBuilder.getPendingIntent( 0, PendingIntent.FLAG_UPDATE_CURRENT);
             mBuilder.setContentIntent(resultPendingIntent);
+
+           // mBuilder.setContentIntent(PendingIntent.getActivity(context, 0, resultIntent, 0));
+
             mBuilder.setAutoCancel(true);
+
             NotificationManager mNotificationManager =
                     (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         // mId allows you to update the notification later on.
+
             mNotificationManager.notify(1, mBuilder.build());
     }
 

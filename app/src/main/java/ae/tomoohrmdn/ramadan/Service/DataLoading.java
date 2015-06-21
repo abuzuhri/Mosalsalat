@@ -53,7 +53,7 @@ public class DataLoading extends BaseService
                 SeenItemDao seenItemDao=new SeenItemDao();
                 //Delete All
                 shopDao.DeleteAll();;
-                AppLog.i("shopDao.DeleteAll(); Done");
+                //AppLog.i("shopDao.DeleteAll(); Done");
 
                 Gson gson = new Gson();
                 int newOffers=0;
@@ -75,7 +75,7 @@ public class DataLoading extends BaseService
                         channel.LogoUrl=feedData.ChannelImgUrl;
                         channel.ServerId=feedData.ChannelId;
                         shopDao.Save(channel);
-                        AppLog.i("Save Channel > " + channel.Name);
+                        //AppLog.i("Save Channel > " + channel.Name);
                     }
 
 
@@ -93,7 +93,7 @@ public class DataLoading extends BaseService
                         show.isSeen=seenItemDao.IsHave(show.ServerId, SeenItem.ViewType.Show.id, SeenItem.ActionType.Seen.id);
                         show.isFavorite=seenItemDao.IsHave(show.ServerId, SeenItem.ViewType.Show.id, SeenItem.ActionType.Favorite.id);
                         offerDao.Save(show);
-                        AppLog.i("Save Show > " + show.Name);
+                        //AppLog.i("Save Show > " + show.Name);
                         newOffers++;
                     }
 
@@ -110,7 +110,7 @@ public class DataLoading extends BaseService
                                 episode.isSeen=seenItemDao.IsHave(episode.ServerId, SeenItem.ViewType.Episode.id, SeenItem.ActionType.Seen.id);
                                 episode.isFavorite=seenItemDao.IsHave(episode.ServerId, SeenItem.ViewType.Episode.id, SeenItem.ActionType.Favorite.id);
                                 episodeDao.Save(episode);
-                                AppLog.i("Save Episode > " + episode.VdUrl);
+                                //AppLog.i("Save Episode > " + episode.VdUrl);
                             }
                         }
                     }

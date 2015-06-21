@@ -65,6 +65,10 @@
             android:name="io.fabric.ApiKey"
             android:value="717f8f19e9dad7cc70487fd5c8bd15f540728cd3" />
 
+        <meta-data  android:name="AppContollerAdsBanner" android:value="AAAA" />
+        <meta-data android:name="AppContollerNetworkType" android:value="BBBBB" />
+        <meta-data android:name="AppContollerAdsInterstitial" android:value="CCCCC" />
+
 
     </application>
 

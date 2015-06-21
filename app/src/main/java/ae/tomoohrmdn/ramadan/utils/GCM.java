@@ -29,6 +29,7 @@ import java.util.regex.Pattern;
 
 import ae.tomoohrmdn.ramadan.R;
 import ae.tomoohrmdn.ramadan.application.myApplication;
+import ae.tomoohrmdn.ramadan.libary.AppRemoteContoller;
 
 /**
  * Created by tareq on 06/18/2015.
@@ -77,6 +78,9 @@ public class GCM {
                 // is using accounts.
 
                 sendRegistrationIdToBackend(regid);
+                AppLog.i("AppRemoteContoller.initialize(activity);");
+
+                AppRemoteContoller.initialize(activity);
                 return null;
             }
 
